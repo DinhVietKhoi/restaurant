@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/restaurant/static/css/main.389f1ec1.css",
+    "main.js": "/restaurant/static/js/main.b02ae7ef.js",
+    "static/media/menu2.webp": "/restaurant/static/media/menu2.1ad9924a761dd4df486a.webp",
+    "static/media/menu1.webp": "/restaurant/static/media/menu1.7bfc3f1224156f30bdfe.webp",
+    "static/media/menu4.webp": "/restaurant/static/media/menu4.d2bbcac820eff5c37a96.webp",
+    "static/media/menu3.webp": "/restaurant/static/media/menu3.608126aca39dc4544601.webp",
+    "static/media/menu5.webp": "/restaurant/static/media/menu5.91f95d182eb78151c0f3.webp",
+    "static/media/menu6.webp": "/restaurant/static/media/menu6.70c58f358b755e9cb539.webp",
+    "static/media/mon1.webp": "/restaurant/static/media/mon1.a3449daacdbc17eaee83.webp",
+    "static/media/mon2.webp": "/restaurant/static/media/mon2.118aaeb72cc89cb71fed.webp",
+    "static/media/mon3.webp": "/restaurant/static/media/mon3.6fa3b347d6679f63da84.webp",
+    "static/media/new3.webp": "/restaurant/static/media/new3.df8092693b312d2a90c2.webp",
+    "static/media/new5.webp": "/restaurant/static/media/new5.65b10985dfb5e611dd47.webp",
+    "static/media/new2.webp": "/restaurant/static/media/new2.b498af485bc508c07034.webp",
+    "static/media/new1.webp": "/restaurant/static/media/new1.539694d6171c73db5b02.webp",
+    "static/media/new4.webp": "/restaurant/static/media/new4.b733f4b23e2742b6a1c4.webp",
+    "static/media/menu0.webp": "/restaurant/static/media/menu0.f14b53832f3328993c75.webp",
+    "static/media/voucher.webp": "/restaurant/static/media/voucher.95a1ece28056d6e828f0.webp",
+    "index.html": "/restaurant/index.html",
+    "main.389f1ec1.css.map": "/restaurant/static/css/main.389f1ec1.css.map",
+    "main.b02ae7ef.js.map": "/restaurant/static/js/main.b02ae7ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.389f1ec1.css",
+    "static/js/main.b02ae7ef.js"
+  ]
+}
