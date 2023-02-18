@@ -1,0 +1,18 @@
+.tagCategoryFeatured{
+    cursor: pointer;
+    &:hover .tagCategoryFeatured__box{
+        border: 1px solid #d69b4c;
+    }
+    &__box{
+        border: 1px solid transparent;
+
+        padding: 20px;
+        border-radius: 10px;
+        color: #ffffff; 
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        flex-direction: column;
+        transition: 0.3s ease-out;
+    }
+}

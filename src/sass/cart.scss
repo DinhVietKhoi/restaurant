@@ -1,0 +1,36 @@
+.cart{
+    padding:50px 0;
+    color:#ffffff;
+    &__empty{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & i{
+            font-size: 72px;
+            margin: 40px 0;
+        }
+        & span{
+            font-size: 24px;
+            color:#d69b4c;
+        }
+    }
+    & table{
+        width: 100%;
+        border: 1px solid #ffffff;
+        border-collapse: collapse;
+        & th,td{
+            border-bottom: 1px solid #ffffff;
+            padding:10px;
+        }
+        td{
+            text-align: center;
+            height: 120px;
+        }
+        & .img{
+            width: 150px;
+            & img{
+                width: 100%;
+            }
+        }
+    }
+}

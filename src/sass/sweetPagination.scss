@@ -1,0 +1,16 @@
+.sweetPagination {
+    .pageItem{
+        & button{
+            color:#ffffff;
+            border-radius: 10px !important;
+            border: 1px solid #ffffff !important;
+            background-color: transparent !important;
+            width: 30px !important;
+            height: 30px !important;
+            &.activeButton {
+                background-color: #d69c52 !important;
+                border: 1px solid #d69c52 !important;
+            }
+        }
+    }
+}

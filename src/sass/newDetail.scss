@@ -1,0 +1,50 @@
+.newDetail{
+    padding:50px 0;
+    color:#ffffff;
+    .titleSection{
+        & span{
+            font-size: 32px !important;
+        }
+    }
+    & .time,.user{
+        display: flex;
+        align-items: center;
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        & .time{
+            margin-right: 10px;
+        }
+        & i{
+            margin-right: 5px;
+            color:#d69c52;
+        }
+        & strong{
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        & span{
+            font-size: 14px;
+        }
+    }
+    &__content{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        & p{
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    }
+    &__update{
+        width: 100%;
+        text-align: center;
+
+        & span{
+            width: 100%;
+            color:#d69c52;
+        }
+    }
+}

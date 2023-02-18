@@ -1,0 +1,33 @@
+.breadCrumb{
+    width: 100%;
+    background-color: #071513;
+    color:#ffffff;
+    height: 60px;
+    &__container{
+        width: 1300px;
+        height: 100%;
+        margin:0 auto;
+        display: flex;
+        align-items: center;
+        font-size: 12px !important;
+        max-width: 100%;
+        & a{
+            font-size: 14px;
+            color:#ffffff;
+            &:hover{
+                color:#d69c52;
+            }
+        }
+        & i{
+            margin: 0px 10px;
+            font-size: 14px;
+            line-height: 0;
+        }
+        & span{
+            font-size: 14px;
+        }
+    }
+    &__current{
+        color:#d69c52;
+    }
+}

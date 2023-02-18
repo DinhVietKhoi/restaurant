@@ -1,0 +1,244 @@
+.product{
+    margin-bottom: 50px;
+    // min-height: 300px;
+    &__body{
+        background-color: #e5e5e5;
+        padding: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &::after{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            left:5px;
+            top:5px;
+            background-color: #acacac;
+        }
+        &:hover{
+            & .product__overlay{
+                display: flex;
+                & .product__overlay__scale{
+                    position: absolute;
+                    animation: animation__overlay 0.3s ease-out forwards;
+                }
+                & .product__overlay__icon{
+                    pointer-events: none;
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    // align-items: center;
+                    & i{
+                        pointer-events: all;
+                        position: absolute;
+                        top:50%;
+                        transform: translate(0,-50%);
+                        // margin: 0 10px;
+                        &:nth-child(1){
+                            left:0%;
+
+                            animation: animation__overlay__icon 0.125s ease-out forwards;
+                        }
+                        &:nth-child(2){
+                            right: 0%;
+                            animation: animation__overlay__icon1 0.125s ease-out forwards;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    &__img{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & a{
+            display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        & img{
+            width: 100%;
+            background-size: contain;
+        }
+    }
+    &__overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left:0;
+        top: 0;
+        display: none;
+        &__scale{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(136,136,136,0.5);
+            transform: scale(0.5);
+        }
+        & i{
+            position: absolute;
+            cursor: pointer;
+            padding:15px;
+            background-color: #ffffff;
+            border-radius: 100%;
+            color:#d79f50;
+            margin: 10px;
+            transition: .3s ease-out;
+            top:50%;
+            transform: translate(-50%,-50%);
+            &:hover{
+                color:#a37b44;
+            }
+            &:nth-child(1){
+                left:0;
+                opacity: 0;
+            }
+            &:nth-child(2){
+                right:0;
+                opacity: 0;
+            }
+        }
+    }
+    &__title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding:0 20px;
+        margin-bottom: 0px;
+        & p{
+            margin:10px 0;
+            font-weight: 700;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width:100%; /* some width */
+            text-align: center;
+            color:#000000;
+        }
+        
+    }
+    &__price{
+        display: flex;
+        align-items: center;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        & span{
+            font-weight: 700;
+            font-size: 18px;
+            color:#d8474d;
+            &:nth-child(2){
+                margin-left: 10px;
+                color:grey;
+                position: absolute;
+                font-size: 12px;
+                top: 5px;
+                left: 100%;
+                &::after{
+                    top:50%;
+                    left:50%;
+                    transform: translate(-50%,-50%);
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    width: 100%;
+                    background-color: grey;
+                }
+            }
+        }
+    }
+    &__show{
+        position: relative;
+        top:20px;
+        & a{
+            background-color:#d69b4c;
+            padding:10px 20px;
+            border-radius: 10px;
+            color:#ffffff;
+            font-size: 14px;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                top:4px;
+                left:0px;
+                border-radius: 10px;
+                background-color: #a37b44;
+            }
+        }
+    }
+    &__like{
+        position: absolute;
+        cursor: pointer;
+        bottom: -20px;
+        &.active{
+            & i{
+                color:#d8474d;
+            }
+        }
+        & i{
+            font-size: 20px;
+            border-radius: 100%;
+            padding:10px 30px 40px 30px;
+            background-color:#d79f50;
+            color:#ffffff;
+            
+        }
+    }
+    &__discount{
+        position: absolute;
+        right:10px;
+        top:10px;
+        & span{
+            padding:5px 15px;
+            border-radius: 10px;
+            background-color: #d8474d;
+            color:#ffffff;
+            font-weight: 700;
+        }
+    }
+    &__cart{
+        position: fixed;
+        width: 100vw;
+        background-color: red;
+        height: 100vh;
+        top:0;
+        left:0;
+    }
+}
+//keyfream
+@keyframes animation__overlay__icon{
+    100%{
+        // transform: translateX(0%) ;
+        left:15%;
+        opacity: 1 ;
+    }
+    
+}
+@keyframes animation__overlay__icon1{
+    100%{
+        // transform: translateX(0%) ;
+        right:15%;
+        opacity: 1 ;
+    }
+    
+}
+@keyframes animation__overlay{
+    100%{
+        transform: scale(1);
+    }
+    
+}

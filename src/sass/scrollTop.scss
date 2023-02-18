@@ -1,0 +1,20 @@
+.scrollTop{
+    position:fixed;
+    right:10px;
+    bottom:40px;
+    z-index:100;
+    & i{
+        transform: rotate(90deg);
+        background-color:#d79f50;
+        padding:10px 15px;
+        cursor:pointer;
+        font-size:24px;
+        color:#ffffff;
+        border-radius:10px ;
+    }
+    & i:hover{
+        // color:#e6921e;
+        background-color:#e6921e;
+
+    }
+}

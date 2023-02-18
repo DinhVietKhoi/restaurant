@@ -1,0 +1,30 @@
+.swiper{
+    &-wrapper{
+        padding-bottom: 20px;
+    }
+    &-edit{
+        padding-bottom: 40px;
+
+    }
+    &-slide{
+        padding:0 20px;
+    }
+    &-pagination{
+        position: absolute;
+        bottom:0 !important;
+        &-bullet{
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+            border: 1px solid #d69c52 !important;
+            opacity: 1 !important;
+            background-color: #10302c !important;
+            &-active{
+                opacity: 1 !important;
+                border: 1px solid #d69c52 !important;
+                background-color: #d69c52 !important;
+            }
+        }
+    }
+    
+}

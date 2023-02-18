@@ -1,0 +1,87 @@
+.contact{
+    padding: 50px 0;
+    color:#ffffff;
+    & .boxControl{
+        min-height: 340px;
+    }
+    & .info{
+        padding:0 10px 10px 10px;
+        & h5{
+            margin: 0;
+        }
+        & ul {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                & li{
+                margin:10px 0 0 0;
+                display: flex;
+                align-items: center;
+                & span{
+                    font-size: 14px;
+                    margin:0;
+                }
+                & p{
+                    line-height: 1.5;
+                    font-size: 14px;
+                    margin:0;
+                }
+                & strong{
+                    margin-right: 5px;
+                }
+                & a{
+                    color:#d69c52;
+                    font-size: 14px;
+                }
+                &.gohome{
+                    width: fit-content;
+                    & a{
+                        padding:10px 20px;
+                        background-color: #d69c52;
+                        color:#ffffff;
+                        opacity: .8;
+                        border-radius: 10px;
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        
+        & form{
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            & input{
+                margin-bottom: 10px;
+                padding:10px 20px;
+                border-radius: 10px;
+                outline: none;
+            }
+            & textarea{
+                margin-bottom: 10px;
+                outline: none;
+                border-radius: 10px;
+                padding:10px 20px;
+            }
+            & button{
+                max-width: 50%;
+                padding:10px 20px;
+                font-weight: 700;
+                background-color: #d69c52;
+                color: #ffffff;
+                outline: none;
+                border: none;
+                width: fit-content;
+                cursor: pointer;
+                opacity: .8;
+                border-radius: 10px;
+                &:hover{
+                    opacity: 1;
+                }
+                // box-sizing: border-box;
+            }
+        }
+    }
+}
