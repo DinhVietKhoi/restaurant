@@ -137,7 +137,7 @@
     .collection__product{
         display: flex;
         flex-direction: column;
-        margin-left: 20px;
+        // margin-left: 20px;
         .collection-product{
             &__filter{
                 position: relative;
@@ -195,6 +195,65 @@
             }
         }
         
+    }
+    .food__filter{
+        position: fixed;
+        right:0;
+        top:50%;
+        z-index: 200;
+        display: none;
+        &__content{
+            background-color: #143b36;
+            height: 100vh;
+            overflow-y: auto;
+            // position: fixed;
+            
+            width: 3270px;
+            max-width: 270px;
+            padding:10px;
+            height: 100vh;
+        }
+        &__body{
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top:0;
+            right:0;
+            transition: 0.3s ease-out;
+            &.active{
+                transform: translateX(0);
+            }
+            &.invalid{
+                transform: translateX(270px);
+            }
+        }
+        &__overlay{
+            &.active{
+                display: block;
+            }
+            &.invalid{
+                display: none;
+            }
+            z-index: -1;
+            position: fixed;
+            top:0;
+            left:0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(4,5,6,.6);
+        }
+        & i{
+            background-color: #d69c52;
+            height: 40px;
+            width: 40px;
+        // font-size: 32px;
+            cursor: pointer;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            border-radius: 10px 0 0 10px;
+            justify-content: center;
+        }
     }
 }
 @keyframes dropDownAnimation{

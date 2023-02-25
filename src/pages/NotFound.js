@@ -18,7 +18,7 @@ function NotFound({breadCrumbHandle}) {
             >
                 <h1 style={{fontSize:52,padding:0,margin:0,fontWeight:400}}>404</h1>
                 <h4 style={{marginBottom:40,fontWeight:400}}>Trang này đang bị lỗi bạn vui lòng quay trở lại trang chủ</h4>
-                <Link to='/' style={{marginBottom:30,padding:'10px 20px',color:"#ffffff",backgroundColor:"#d79f50",borderRadius:'10px'}}>Về trang chủ</Link>
+                <Link to='/restaurant' style={{marginBottom:30,padding:'10px 20px',color:"#ffffff",backgroundColor:"#d79f50",borderRadius:'10px'}}>Về trang chủ</Link>
             </div>
         </div>
     )

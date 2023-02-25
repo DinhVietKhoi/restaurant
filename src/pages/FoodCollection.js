@@ -68,6 +68,11 @@ function FoodCollection({ breadCrumbHandle,changeTypeFoodHandle,typeFood }) {
     }
     setProductFilter(productFilterFinish)
   }, [foodObject, filterPrice, typeFood])
+  const [toggleFilter, setToggleFilter] = useState(false)
+  const toggleFilterHandle = () => {
+    setToggleFilter(!toggleFilter)
+  }
+  
   return (
     <div className='collection'>
       <div className='collection__container container'>
@@ -177,10 +182,128 @@ function FoodCollection({ breadCrumbHandle,changeTypeFoodHandle,typeFood }) {
                 </ul>
               </div>
             </div>
+            <div className='food__filter'>
+              <div className={`food__filter__overlay ${toggleFilter===true?'active':'invalid'}`} onClick={toggleFilterHandle}></div>
+              <div className={`food__filter__body ${toggleFilter===true?'active':'invalid'}`}>
+                <i className={`${toggleFilter!==true?'fa-solid fa-filter':'fa-solid fa-x'}`} onClick={toggleFilterHandle}></i>
+                <div className='food__filter__content'>
+                  <div className='collection__menu boxControl'>
+                  <h4>DANH MỤC SẢN PHẨM</h4>
+                  <ul>
+                    <li><Link to="/"> Trang chủ</Link></li>
+                    <li><Link to="/gioi-thieu">Giới thiệu</Link></li>
+                    <li className='collection-menu__dropdown'>
+                      <div className='dropdown'>
+                        <Link onClick={()=>changeTypeFoodHandle('all') } to='/mon-an' style={{color:'#d69c52'}}>Các loại món ăn</Link>
+                        <div className={`dropdown__icon ${checkDropdown===true?'active':'invalid'}`} onClick={dropDownHandle}>
+                          <div></div>
+                          <div></div>
+                        </div>
+                      </div>
+                      <div className={`dropdown__list-type ${checkDropdown===true?'active':'invalid'}`}>
+                        <ul className={typeFood}>
+                          <li onClick={()=>changeTypeFoodHandle('khaivi')}>Khai vị</li>
+                          <li onClick={()=>changeTypeFoodHandle('monchinh')}>Món chính</li>
+                          <li onClick={()=>changeTypeFoodHandle('monnuoc')}>Canh - Tiềm - Sup</li>
+                          <li onClick={()=>changeTypeFoodHandle('com')}>Cơm - Mì - Cháo</li>
+                          <li onClick={()=>changeTypeFoodHandle('trangmieng')}>Bánh và tráng miệng</li>
+                          <li onClick={()=>changeTypeFoodHandle('douong')}>Đồ uống</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li><Link to="/tin-tuc">Tin Tức</Link></li>
+                    <li><Link to="/lien-he">Liên hệ </Link></li>
+                  </ul>
+                </div>
+                <div className='collection__filter boxControl'>
+                  <h4>BỘ LỌC</h4>
+                  <div className='filter__box'>
+                      <span>
+                        {
+                          filterPrice==0?'Tất cả':filterPrice==1?'Dưới 100.000đ':filterPrice==2?'Từ 100.000đ - 1.000.000đ':'Trên 1.000.000đ'
+                        }
+                    </span>
+                    {
+                      listFilter && listFilter.map(e => [
+                        <span key={e} onClick={()=>addFilterhandle(e)}><i className="fa fa-close"></i>{e}</span>
+                      ])
+                    }
+                  </div>
+                </div>
+                <div className='collection__priceList boxControl'>
+                  <h4>CHỌN MỨC GIÁ</h4>
+                  <ul>
+                    <li>
+                      <input type='radio' name='radioPrice' onChange={e=>addFilterPricehandle(e.target.value)} checked={filterPrice=='0'} value="0"></input>
+                      <span>Tất cả</span>
+                    </li>
+                    <li>
+                      <input type='radio' name='radioPrice' onChange={e=>addFilterPricehandle(e.target.value)} checked={filterPrice=='1'} value="1"></input>
+                      <span>Dưới 100.000đ</span>
+                    </li>
+                    <li>
+                      <input type='radio' name='radioPrice' onChange={e=>addFilterPricehandle(e.target.value)} checked={filterPrice=='2'} value="2"></input>
+                      <span>Từ 100.000đ - 1.000.000đ</span>
+                    </li>
+                    <li>
+                      <input type='radio' name='radioPrice' onChange={e=>addFilterPricehandle(e.target.value)} checked={filterPrice=='3'} value="3"></input>
+                      <span>Trên 1.000.000đ</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className='collection__size boxControl'>
+                  <h4>Hương vị</h4>
+                  <ul>
+                    <li>
+                      <input checked={listFilter.includes("Mặn")} onChange={e=>addFilterhandle(e.target.value)} value='Mặn' type='checkbox'></input>
+                      <span>Mặn</span>
+                    </li>
+                    <li>
+                      <input checked={listFilter.includes("Ngọt")} onChange={e=>addFilterhandle(e.target.value)} value='Ngọt' type='checkbox'></input>
+                      <span>Ngọt</span>
+                    </li>
+                    <li>
+                      <input checked={listFilter.includes("Chua")} onChange={e=>addFilterhandle(e.target.value)} value='Chua' type='checkbox'></input>
+                      <span>Chua</span>
+                    </li>
+                    <li>
+                      <input checked={listFilter.includes("Cay")} onChange={e=>addFilterhandle(e.target.value)} value='Cay' type='checkbox'></input>
+                      <span>Cay</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className='collection__taste boxControl'>
+                  <h4>KÍCH CỠ</h4>
+                  <ul>
+                    <li>
+                      <input checked={listFilter.includes("Lớn")} onChange={e=>addFilterhandle(e.target.value)} value='Lớn' type='checkbox'></input>
+                      <span>Lớn</span>
+                    </li>
+                    <li>
+                      <input checked={listFilter.includes("Vừa")} onChange={e=>addFilterhandle(e.target.value)} value='Vừa' type='checkbox'></input>
+                      <span>Vừa</span>
+                    </li>
+                    <li>
+                      <input checked={listFilter.includes("Nhỏ")} onChange={e=>addFilterhandle(e.target.value)} value='Nhỏ' type='checkbox'></input>
+                      <span>Nhỏ</span>
+                    </li>
+                  </ul>
+                </div>
+                </div>
+              </div>
+            </div>
             <div className='col- c-9 l-12'>
               <div className='collection__product'>
                 <div className='collection-product__header'>
-                  <span className='title'>TẤT CẢ MÓN ĂN</span>
+                  <span className='title'>{
+                    typeFood === 'all' ? 'TẤT CẢ MÓN ĂN' :
+                    typeFood === 'khaivi' ? 'KHAI VỊ' :
+                    typeFood === 'douong' ? 'ĐỒ UỐNG' :
+                    typeFood === 'monnuoc' ? 'CANH - TIỀM - SUP' :
+                    typeFood === 'com' ? 'CƠM - MÌ - CHÁO' :
+                    typeFood === 'monchinh' ? 'MÓN CHÍNH' :
+                    'BÁNH VÀ TRÁNG MIỆNG'
+                  }</span>
                   <div className='collection-product__filter'>
                     <div className='filter__dropdown'>
                       <select onChange={(e)=>sortProductHandle(e.target.value)}>
@@ -196,10 +319,10 @@ function FoodCollection({ breadCrumbHandle,changeTypeFoodHandle,typeFood }) {
                         {
                           productFilter && sortProduct == 'tang' ?
                           productFilter.sort((a,b)=>a.price-b.price).map((e, index) => [
-                            index+1<=9*numberMore&&<Product
+                            index+1<=8*numberMore&&<Product
                                 key={e}
                                 id={e.id}
-                                classProps='col c-4 l-6 m-12'
+                                classProps='col c-3 l-6'
                                 name={e.name}
                                 price={e.price}
                                 discount={e.discount}
@@ -208,10 +331,10 @@ function FoodCollection({ breadCrumbHandle,changeTypeFoodHandle,typeFood }) {
                             />
                           ]) :
                           productFilter.sort((a,b)=>b.price-a.price).map((e, index) => [
-                            index+1<=9*numberMore&&<Product
+                            index+1<=8*numberMore&&<Product
                                 key={e}
                                 id={e.id}
-                                classProps='col c-4 l-6 m-12'
+                                classProps='col c-3 l-6'
                                 name={e.name}
                                 price={e.price}
                                 discount={e.discount}
@@ -227,7 +350,7 @@ function FoodCollection({ breadCrumbHandle,changeTypeFoodHandle,typeFood }) {
                   </div>
                   <div className='collection-product__getMore'>
                     {
-                      numberMore<(productFilter.length/9)&&<span onClick={IncreaseNumberMore}>Xem thêm...</span>
+                      numberMore<(productFilter.length/8)&&<span onClick={IncreaseNumberMore}>Xem thêm...</span>
                     }
                   </div>
                 </div>

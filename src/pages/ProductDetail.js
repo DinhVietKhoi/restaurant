@@ -8,6 +8,7 @@ import TitleSection from '../components/TitleSection'
 import { DataContext } from '../App'
 import '../sass/productDetail.scss'
 import menu0 from '../assets/menuBanner/menu0.webp'
+import { toast } from 'react-toastify'
 import voucher from '../assets/voucher.webp'
 import { Link } from 'react-router-dom'
 
@@ -44,6 +45,32 @@ function ProductDetail({ breadCrumbHandle }) {
         window.scrollTo(0,0)
         data.setProductDetailInfoHandle(id)
     }
+    const handleCoppyVoucher = (a) => {
+        if (a === 1) {
+            navigator.clipboard.writeText("FREESHIP")
+        toast("Đã sao chép mã giảm giá!!")
+                
+        }
+            else if (a === 2) {
+            navigator.clipboard.writeText("RESTAURANT1")
+            toast("Đã sao chép mã giảm giá!!")
+        }
+                else if (a === 3) {
+                    navigator.clipboard.writeText("RESTAURANT2")
+            toast("Đã sao chép mã giảm giá!!")
+        } 
+    }
+    // const [arrVoucher, setArrVoucher] = useState([{ a1: { a: false }, a2: {a:false},a3:{a:false} }])
+    // useEffect(() => {
+    //     let setTimeoutArrVoucher;
+    //     clearTimeout(setTimeoutArrVoucher)
+    //     setTimeoutArrVoucher = setTimeout(() => {
+    //         setArrVoucher([{ a1: { a: false }, a2: {a:false},a3:{a:false} }])
+    //     }, 3000);
+    //     return (
+    //         clearTimeout(setTimeoutArrVoucher)
+    //     )
+    // },[checkCopy])
     return (
         <div className='productDetail'>
             <div className='productDetail__container container'>
@@ -59,27 +86,21 @@ function ProductDetail({ breadCrumbHandle }) {
                                                 src={productCurrent&&imageMain===1?productCurrent[0].image:menu0}
                                                 alt="img"></img>
                                             </div>
-                                            <div className='grid'>
-                                                <div className='image__small row'>
-                                                <div className="col c-4 l-2-4 m-3">
-                                                        <div onClick={()=>imageMainHandle(1)} className={`image ${imageMain===1&&'active'}`}>
-                                                            <img  src={productCurrent&&productCurrent[0].image} alt="img"></img>
-                                                            <span></span>
-                                                            <span></span>
-                                                            <span></span>
-                                                            <span></span>
-                                                        </div>
+                                                <div className='image__small'>
+                                                    <div onClick={()=>imageMainHandle(1)} className={`image ${imageMain===1&&'active'}`}>
+                                                        <img  src={productCurrent&&productCurrent[0].image} alt="img"></img>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
                                                     </div>
-                                                    <div className="col c-4 l-2-4 m-3">
-                                                        <div onClick={()=>imageMainHandle(2)} className={`image ${imageMain===2&&'active'}`}>
-                                                            <img  src={menu0} alt="img"></img>
-                                                            <span></span>
-                                                            <span></span>
-                                                            <span></span>
-                                                            <span></span>
-                                                        </div>
+                                                    <div onClick={()=>imageMainHandle(2)} className={`image ${imageMain===2&&'active'}`}>
+                                                        <img  src={menu0} alt="img"></img>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
                                                     </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -125,20 +146,20 @@ function ProductDetail({ breadCrumbHandle }) {
                                                             <li className='item'>
                                                                 <div className='group'>
                                                                     <span>Click để được nhận mã freeship</span>
-                                                                    <button>Sao chép</button>
+                                                                    <button className="active" onClick={()=>handleCoppyVoucher(1)}></button>
                                                                 </div>
                                                                 
                                                             </li>
                                                             <li  className='item'> 
                                                             <div className='group'>
                                                                 <span>Click để được nhận mã giảm 20.000₫</span>
-                                                                <button>Sao chép</button>
+                                                                <button onClick={()=>handleCoppyVoucher(2)}></button>
                                                                 </div>
                                                             </li>
                                                             <li className='item'>
                                                             <div className='group'>
                                                                 <span>Click để được nhận mã giảm 50.000₫</span>
-                                                                <button>Sao chép</button>
+                                                                <button onClick={()=>handleCoppyVoucher(3)}></button>
                                                             </div>
                                                             </li>
                                                         </ul>
@@ -189,15 +210,16 @@ function ProductDetail({ breadCrumbHandle }) {
                                         <TitleSection title="Sản phẩm cùng loại" />
                                         <Swiper
                                             breakpoints={{
-                                                992: {
+                                                1200: {
                                                     slidesPerView: 4,
                                                 },
                                                 768: {
                                                     slidesPerView: 3,
-                                                },
+                                                    
+                                                }
+                                                ,
                                                 576:{
                                                     slidesPerView: 2,
-
                                                 }
                                                 ,
                                                 375: {
@@ -246,9 +268,11 @@ function ProductDetail({ breadCrumbHandle }) {
                                                                             <img src={e.image} alt='image'></img>
                                                                         </Link>
                                                                         <div className='info col c-8'>
-                                                                            <span>{e.name}</span>
-                                                                            <span>{e.price}.000₫</span>
-                                                                            <span>Đặt món</span>
+                                                                            <div>
+                                                                                <Link to={e.slug} onClick={()=>setProductDetailInfoHandle(e.id) }>{e.name}</Link>
+                                                                                <span>{e.price}.000₫</span>
+                                                                            </div>
+                                                                            <span onClick={()=>data.addProductCartHandle(e.id,1)}>Thêm món</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>

@@ -1,8 +1,12 @@
 .scrollTop{
     position:fixed;
-    right:10px;
+    right:40px;
     bottom:40px;
-    z-index:100;
+    z-index:201;
+    & .scroll-to-top {
+        right:10px;
+        bottom:40px;
+    }
     & i{
         transform: rotate(90deg);
         background-color:#d79f50;
@@ -15,6 +19,18 @@
     & i:hover{
         // color:#e6921e;
         background-color:#e6921e;
-
+    }
+    & button{
+        background-color:#d79f50;
+        opacity: .5;
+        transition: .3s ease-out;
+        z-index:100;
+        &:hover{
+            background-color:#e6921e;
+            opacity: 1;
+        }
+    }
+    & svg{
+        fill: #ffffff;
     }
 }

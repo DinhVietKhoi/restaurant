@@ -18,6 +18,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AddCart from './components/AddCart.js';
 import foodObject from './data/FoodAll'
 import Cart from './pages/Cart.js';
+import Payment from './pages/Payment.js';
 
 export const DataContext = createContext()
 
@@ -34,7 +35,6 @@ function App() {
     window.scroll({
       top: 0,
       left:0,
-      behavior: "smooth"
   })
   }, [breadCrumb])
   const [productDetailInfo, setProductDetailInfo] = useState('')
@@ -140,7 +140,8 @@ function App() {
           <Header changeTypeFoodHandle={changeTypeFoodHandle} />
           <BreadCrumb breadCrumb={breadCrumb} />
           <Routes>
-            <Route path='/' element={<Home breadCrumbHandle={breadCrumbHandle} />} />
+            {/* <Route path='/' element={<Home breadCrumbHandle={breadCrumbHandle} />} /> */}
+            <Route path='/restaurant' element={<Home breadCrumbHandle={breadCrumbHandle} />} />
             <Route path='/mon-an/*' element={<ProductDetail breadCrumbHandle={breadCrumbHandle} />} />
             <Route path='/mon-an' element={<FoodCollection breadCrumbHandle={breadCrumbHandle} changeTypeFoodHandle={changeTypeFoodHandle} typeFood={typeFood} />} />
             <Route path='/gioi-thieu' element={<Introduce breadCrumbHandle={breadCrumbHandle} />} />
@@ -148,6 +149,7 @@ function App() {
             <Route path='/tin-tuc/*' element={<NewDetail breadCrumbHandle={breadCrumbHandle} />} />
             <Route path='/lien-he' element={<Contact breadCrumbHandle={breadCrumbHandle} />} />
             <Route path='/gio-hang' element={<Cart breadCrumbHandle={breadCrumbHandle} />} />
+            <Route path='/thanh-toan' element={<Payment breadCrumbHandle={breadCrumbHandle} />} />
             <Route path='*' element={<NotFound breadCrumbHandle={breadCrumbHandle} />} />
           </Routes>
           <Footer />

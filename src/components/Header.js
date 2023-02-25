@@ -46,7 +46,7 @@ function Navigation({ changeTypeFoodHandle }) {
                     <div className='row'>
                         <div className='col c-3 l-12'>
                             <div className='header__logo'>
-                                <Link to="/">
+                                <Link to="/restaurant">
                                     <img src="//bizweb.dktcdn.net/100/469/097/themes/882205/assets/logo.png?1672455206343" alt="logo"></img>
                                 </Link>
                             </div>
@@ -55,7 +55,7 @@ function Navigation({ changeTypeFoodHandle }) {
                             <div className='header__navbar'>
                                 <ul className='header__navbar__menu'>
                                     <li>
-                                        <NavLink  to="/" >Trang chủ</NavLink>
+                                        <NavLink  to="/restaurant" >Trang chủ</NavLink>
                                     </li>
                                     <li>
                                         <NavLink  to="/gioi-thieu">Giới thiệu</NavLink>
@@ -232,10 +232,10 @@ function Navigation({ changeTypeFoodHandle }) {
                     </div>
                     <ul className='collection__menu menu-mini__list' style={{ flexDirection: 'column', padding:10}}>
                         <li>
-                            <NavLink  to="/" >Trang chủ</NavLink>
+                            <NavLink to="/restaurant">Trang chủ</NavLink>
                         </li>
                         <li>
-                            <NavLink  to="/gioi-thieu">Giới thiệu</NavLink>
+                            <NavLink to="/gioi-thieu">Giới thiệu</NavLink>
                         </li>
                         <li className='collection-menu__dropdown'>
                             <div className='dropdown'>

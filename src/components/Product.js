@@ -29,7 +29,6 @@ function Product({ classProps,name,price,discount,img,slug,id }) {
             data.addProductCartHandle(id,1)
         }
     }
-    console.log()
     return (
         <div className={`product ${classProps}`}>
             <div className='product__container'>
@@ -66,7 +65,7 @@ function Product({ classProps,name,price,discount,img,slug,id }) {
                             {
                                 discount > 0 ? <>
                                     <span>{ convertDiscount(price,discount)}₫</span>
-                                    <span> { price.toFixed(3) }₫</span>
+                                    {/* <span> { price.toFixed(3) }₫</span> */}
                                 </>
                                     :
                                     <span>{price.toFixed(3)}₫</span>

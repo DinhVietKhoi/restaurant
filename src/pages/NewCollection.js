@@ -18,7 +18,7 @@ function NewCollection({breadCrumbHandle}) {
             <div className='newCollection__container container'>
                 <div className='grid'>
                     <div className='row-gutter-big'>
-                        <div className='col-gutter-big c-3'>
+                        <div className='col-gutter-big c-3 l-12'>
                             <div className='boxControl'>
                                 <h4>TIN TỨC LIÊN QUAN</h4>
                                 <ul className='newCollection__box'>
@@ -36,7 +36,7 @@ function NewCollection({breadCrumbHandle}) {
                                 </ul>
                             </div>
                         </div>
-                        <div className='col-gutter-big c-9'>
+                        <div className='col-gutter-big c-9 l-12'>
                             <div className='newCollection__news'>
                                 <div className='news__header'>
                                     <h4>TIN TỨC</h4>
@@ -45,7 +45,7 @@ function NewCollection({breadCrumbHandle}) {
                                     <div className='row'>
                                         {
                                             NewsData && NewsData.map(e => [
-                                                <div className='col c-4' key={e}>
+                                                <div className='col c-4 l-6 m-12' key={e}>
                                                     <NewTag
                                                         imageLink={e.image}
                                                         user={e.user}

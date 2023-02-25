@@ -1,11 +1,9 @@
-// navigator.clipboard.writeText("ahihi con cho");
 *{
     font-family: Quicksand, sans-serif;
     box-sizing: border-box;
     font-size: 16px;
     text-decoration: none;
     list-style: none;
-    scroll-behavior: smooth;
     ul{
         padding:0;
         margin:0;
@@ -28,9 +26,8 @@
     }
 }
 html{
-    // background-color: #143b36;
+    background-color: #143b36;
     overflow-x: hidden;
-
 }
 .color_yellow{
     color:#b4874c;
@@ -62,7 +59,7 @@ html{
         background-color: #d69c52;
     }
     & ul{
-        padding:0 40px 20px 10px;
+        padding:0 20px 20px 10px;
         & li{
             background-color: #143b36;
             margin:20px 0;

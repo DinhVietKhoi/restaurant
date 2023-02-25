@@ -27,25 +27,13 @@
                     animation: animation__overlay 0.3s ease-out forwards;
                 }
                 & .product__overlay__icon{
-                    pointer-events: none;
-                    position: relative;
-                    display: flex;
-                    width: 100%;
-                    // align-items: center;
                     & i{
                         pointer-events: all;
-                        position: absolute;
-                        top:50%;
-                        transform: translate(0,-50%);
-                        // margin: 0 10px;
                         &:nth-child(1){
-                            left:0%;
-
                             animation: animation__overlay__icon 0.125s ease-out forwards;
                         }
                         &:nth-child(2){
-                            right: 0%;
-                            animation: animation__overlay__icon1 0.125s ease-out forwards;
+                            animation: animation__overlay__icon 0.125s ease-out forwards;
                         }
                     }
                     
@@ -83,8 +71,15 @@
             background-color: rgba(136,136,136,0.5);
             transform: scale(0.5);
         }
+        &__icon{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            pointer-events: none;
+            justify-content: center;
+        }
         & i{
-            position: absolute;
+            // position: absolute;
             cursor: pointer;
             padding:15px;
             background-color: #ffffff;
@@ -92,19 +87,19 @@
             color:#d79f50;
             margin: 10px;
             transition: .3s ease-out;
-            top:50%;
-            transform: translate(-50%,-50%);
+            // transform: translate(-50%,-50%);
             &:hover{
                 color:#a37b44;
             }
             &:nth-child(1){
-                left:0;
                 opacity: 0;
+                transform: translateX(-50px);
+
             }
             &:nth-child(2){
-                right:0;
                 opacity: 0;
-            }
+            transform: translateX(50px);
+        }
         }
     }
     &__title{
@@ -183,7 +178,7 @@
     &__like{
         position: absolute;
         cursor: pointer;
-        bottom: -20px;
+        bottom: -35px;
         &.active{
             & i{
                 color:#d8474d;
@@ -222,19 +217,9 @@
 //keyfream
 @keyframes animation__overlay__icon{
     100%{
-        // transform: translateX(0%) ;
-        left:15%;
-        opacity: 1 ;
+        transform: translate(0%) ;
+        opacity: 1;
     }
-    
-}
-@keyframes animation__overlay__icon1{
-    100%{
-        // transform: translateX(0%) ;
-        right:15%;
-        opacity: 1 ;
-    }
-    
 }
 @keyframes animation__overlay{
     100%{

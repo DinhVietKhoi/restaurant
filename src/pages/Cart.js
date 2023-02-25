@@ -7,9 +7,9 @@ import foodObject from '../data/FoodAll'
 import { useContext } from 'react'
 import { DataContext } from '../App'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 function Cart({ breadCrumbHandle }) {
     const data = useContext(DataContext)
-    
     useEffect(() => {
         breadCrumbHandle({
             content: 'Giỏ hàng',
@@ -18,6 +18,21 @@ function Cart({ breadCrumbHandle }) {
             type: 1,
         })
     }, [])
+    const handleCoppyVoucher = (a) => {
+        if (a === 1) {
+            navigator.clipboard.writeText("FREESHIP")
+        toast("Đã sao chép mã giảm giá!!")
+                
+        }
+            else if (a === 2) {
+            navigator.clipboard.writeText("RESTAURANT1")
+            toast("Đã sao chép mã giảm giá!!")
+        }
+                else if (a === 3) {
+                    navigator.clipboard.writeText("RESTAURANT2")
+            toast("Đã sao chép mã giảm giá!!")
+        } 
+    }
     return (
         <div className='cart'>
             <div className='cart__container container'>
@@ -108,24 +123,25 @@ function Cart({ breadCrumbHandle }) {
                                             <span className='dot active'></span>
                                             <span className='dot active'></span>
                                         </div>
+                                        
                                         <ul className='list' style={{padding: 10}}>
                                             <li className='item'>
                                                 <div className='group'>
                                                     <span>Click để được nhận mã freeship</span>
-                                                    <button>Sao chép</button>
+                                                    <button className="active" onClick={()=>handleCoppyVoucher(1)}></button>
                                                 </div>
                                                 
                                             </li>
                                             <li  className='item'> 
                                             <div className='group'>
                                                 <span>Click để được nhận mã giảm 20.000₫</span>
-                                                <button>Sao chép</button>
+                                                <button onClick={()=>handleCoppyVoucher(2)}></button>
                                                 </div>
                                             </li>
                                             <li className='item'>
                                             <div className='group'>
                                                 <span>Click để được nhận mã giảm 50.000₫</span>
-                                                <button>Sao chép</button>
+                                                <button onClick={()=>handleCoppyVoucher(3)}></button>
                                             </div>
                                             </li>
                                         </ul>

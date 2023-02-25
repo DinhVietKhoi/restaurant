@@ -90,35 +90,35 @@ function Home({ breadCrumbHandle }) {
                                 <TagCategoryFeatured
                                     link="https://bizweb.dktcdn.net/100/469/097/themes/882205/assets/cate_1.jpg?1672455206343"
                                     name="Món bò"
-                                    content="Các món bò được chế biến tinh tế với hương vị đặc biệt nhất"
+                                    content="Các món bò được chế biến tinh tế đặc biệt nhất"
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
                                 <TagCategoryFeatured
                                     link="https://bizweb.dktcdn.net/100/469/097/themes/882205/assets/cate_2.jpg?1672455206343"
                                     name="Món gà"
-                                    content="Các món gà được chế biến tinh tế với hương vị đặc biệt nhất"
+                                    content="Các món gà được chế biến tinh tế đặc biệt nhất"
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
                                 <TagCategoryFeatured
                                     link="https://bizweb.dktcdn.net/100/469/097/themes/882205/assets/cate_3.jpg?1672455206343"
                                     name="Món heo"
-                                    content="Các món heo được chế biến tinh tế với hương vị đặc biệt nhất"
+                                    content="Các món heo được chế biến tinh tế đặc biệt nhất"
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
                                 <TagCategoryFeatured
                                     link="https://bizweb.dktcdn.net/100/469/097/themes/882205/assets/cate_4.jpg?1672455206343"
                                     name="Món cá"
-                                    content="Các món cá được chế biến tinh tế với hương vị đặc biệt nhất"
+                                    content="Các món cá được chế biến tinh tế đặc biệt nhất"
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
                                 <TagCategoryFeatured
                                     link="https://bizweb.dktcdn.net/100/469/097/themes/882205/assets/cate_5.jpg?1672455206343"
                                     name="Các món khác"
-                                    content="Các món ăn được chế biến tinh tế với hương vị đặc biệt nhất"
+                                    content="Các món ăn được chế biến tinh tế đặc biệt nhất"
                                 />
                             </SwiperSlide>
                         </Swiper>
@@ -156,7 +156,7 @@ function Home({ breadCrumbHandle }) {
                                         <Product
                                             key={e}
                                             id={e.id}
-                                            classProps='col-gutter-big c-3 l-6 m-12'
+                                            classProps='col-gutter-big c-3 l-6'
                                             name={e.name}
                                             price={e.price}
                                             discount={e.discount}
@@ -331,7 +331,7 @@ function Home({ breadCrumbHandle }) {
                                                 avatar='https://kynguyenlamdep.com/wp-content/uploads/2022/06/anh-gai-xinh-cuc-dep.jpg'
                                                 name='Hồng Nhung'
                                                 work='Thư ký giám đốc'
-                                                content='Món ăn ở đây hầu hết đều rất ngon, khẩu vị phù hợp với tôi, tôi sẽ luôn ủng hộ nhà hàng Restaurant'
+                                                content='Món ăn sang chảnh, tôi sẽ luôn ủng hộ nhà hàng Restaurant'
                                             />
                                         </SwiperSlide>
                                         <SwiperSlide>
@@ -339,7 +339,7 @@ function Home({ breadCrumbHandle }) {
                                                 avatar='https://kenh14cdn.com/thumb_w/660/2020/5/28/0-1590653959375414280410.jpg'
                                                 name='Hoài Trang'
                                                 work='Sinh viên trường ngân hàng'
-                                                content='Món ăn ngon bổ dưỡng, vệ sinh rất sạch sẽ, tôi sẽ luôn ủng hộ nhà hàng Restaurant'
+                                                content='Món ăn sang chảnh, tôi sẽ luôn ủng hộ nhà hàng Restaurant'
                                             />
                                         </SwiperSlide>
                                         <SwiperSlide>
