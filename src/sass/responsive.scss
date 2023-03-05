@@ -20,8 +20,8 @@
     display: flex;
     flex-wrap: wrap;
     box-sizing: content-box;
-    margin-left: 12px;
-    margin-right: 12px;
+    margin-left: -12px;
+    margin-right: -12px;
 }
 .col-gutter-big {
     padding-left: 12px;
@@ -274,7 +274,9 @@
         
         padding: 0;
     }
-    
+    .image__main{
+        height: 600px !important;
+    }
 }
 //header
 @media (max-width:1140px){

@@ -226,7 +226,7 @@ function Navigation({ changeTypeFoodHandle }) {
                 }
                 <div className={`collection menu-mini__body ${toggleMenuMini===true?'active':'invalid'}`} style={{pointerEvents:'auto',backgroundColor:'#143b36',height:'100vh',overflowY:'auto',minHeight:'100vh',padding:0}}>
                     <div className='menu-mini__logo' style={{padding:20,width:'100%',borderBottom:'2px solid #ffffff'}}>
-                        <Link to="/">
+                        <Link to="/restaurant">
                             <img style={{width:"172px"}} src="//bizweb.dktcdn.net/100/469/097/themes/882205/assets/logo.png?1672455206343" alt="logo"></img>
                         </Link>
                     </div>
@@ -239,7 +239,7 @@ function Navigation({ changeTypeFoodHandle }) {
                         </li>
                         <li className='collection-menu__dropdown'>
                             <div className='dropdown'>
-                                <Link onClick={() => changeTypeFoodHandle('all')} to='/mon-an' style={toggleMenu === true ? { color: '#d69c52' } : { color: '#ffffff' }}>Món ăn </Link>
+                                <NavLink onClick={() => changeTypeFoodHandle('all')} to='/mon-an' style={toggleMenu === true ? { color: '#d69c52' } : { color: '#ffffff' }}>Món ăn </NavLink>
                             <div className={`dropdown__icon ${toggleMenu===true?'active':'invalid'}`} onClick={toggleMenuHandle}>
                                 <div></div>
                                 <div></div>

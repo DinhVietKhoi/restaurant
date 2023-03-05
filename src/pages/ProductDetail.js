@@ -210,20 +210,19 @@ function ProductDetail({ breadCrumbHandle }) {
                                         <TitleSection title="Sản phẩm cùng loại" />
                                         <Swiper
                                             breakpoints={{
+                                                1400: {
+                                                    slidesPerView: 5,
+                                                    
+                                                },
                                                 1200: {
                                                     slidesPerView: 4,
                                                 },
                                                 768: {
                                                     slidesPerView: 3,
-                                                    
                                                 }
                                                 ,
-                                                576:{
+                                                0: {
                                                     slidesPerView: 2,
-                                                }
-                                                ,
-                                                375: {
-                                                    slidesPerView: 1,
                                                 }
                                             }}
                                             pagination={{

@@ -70,13 +70,16 @@ function Home({ breadCrumbHandle }) {
                         <TitleSection title="Danh mục nổi bật" />
                         <Swiper
                             breakpoints={{
-                                992: {
+                                1200: {
                                     slidesPerView: 4,
                                 },
-                                768: {
+                                992: {
                                     slidesPerView: 3,
                                 },
                                 576: {
+                                    slidesPerView: 2,
+                                },
+                                0: {
                                     slidesPerView: 1,
                                 }
                             }}
@@ -185,7 +188,7 @@ function Home({ breadCrumbHandle }) {
                                 768: {
                                     slidesPerView: 3,
                                 },
-                                375: {
+                                0: {
                                     slidesPerView: 2,
                                 }
                             }}
@@ -277,13 +280,14 @@ function Home({ breadCrumbHandle }) {
                         <TitleSection title='Tin tức' />
                         <Swiper
                             breakpoints={{
-                                992: {
+                                1200: {
                                     slidesPerView: 3,
+                                    
                                 },
                                 576: {
                                     slidesPerView: 2,
                                 },
-                                375: {
+                                0: {
                                     slidesPerView: 1,
                                 }
                             }}

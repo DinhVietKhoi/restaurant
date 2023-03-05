@@ -324,3 +324,10 @@
         
     }
 }
+.menu-mini__body{
+    & a{
+        &.active{
+            color:#d69b4c !important;
+        }
+    }
+}
