@@ -6,7 +6,7 @@ function NewTag({ imageLink, user, title, content, time, slug, id }) {
         <Link to={slug} className='new'>
             <div className='new__container'>
                 <div className='new__image'>
-                    <img alt='img' src={imageLink}></img>
+                    <img alt='img' src={imageLink} loading="lazy"></img>
                     <span>{time}</span>
                 </div>
                 <div className='new__content'>

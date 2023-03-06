@@ -72,7 +72,6 @@ function FoodCollection({ breadCrumbHandle,changeTypeFoodHandle,typeFood }) {
   const toggleFilterHandle = () => {
     setToggleFilter(!toggleFilter)
   }
-  
   return (
     <div className='collection'>
       <div className='collection__container container'>
@@ -234,19 +233,19 @@ function FoodCollection({ breadCrumbHandle,changeTypeFoodHandle,typeFood }) {
                   <h4>CHỌN MỨC GIÁ</h4>
                   <ul>
                     <li>
-                      <input type='radio' name='radioPrice' onChange={e=>addFilterPricehandle(e.target.value)} checked={filterPrice=='0'} value="0"></input>
+                      <input type='radio' name='radioPrice' onChange={e=>addFilterPricehandle(e.target.value)} value="0"></input>
                       <span>Tất cả</span>
                     </li>
                     <li>
-                      <input type='radio' name='radioPrice' onChange={e=>addFilterPricehandle(e.target.value)} checked={filterPrice=='1'} value="1"></input>
+                      <input type='radio' name='radioPrice' onChange={e=>addFilterPricehandle(e.target.value)} value="1"></input>
                       <span>Dưới 100.000đ</span>
                     </li>
                     <li>
-                      <input type='radio' name='radioPrice' onChange={e=>addFilterPricehandle(e.target.value)} checked={filterPrice=='2'} value="2"></input>
+                      <input type='radio' name='radioPrice' onChange={e=>addFilterPricehandle(e.target.value)} value="2"></input>
                       <span>Từ 100.000đ - 1.000.000đ</span>
                     </li>
                     <li>
-                      <input type='radio' name='radioPrice' onChange={e=>addFilterPricehandle(e.target.value)} checked={filterPrice=='3'} value="3"></input>
+                      <input type='radio' name='radioPrice' onChange={e=>addFilterPricehandle(e.target.value)}  value="3"></input>
                       <span>Trên 1.000.000đ</span>
                     </li>
                   </ul>

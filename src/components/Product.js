@@ -10,7 +10,7 @@ function Product({ classProps,name,price,discount,img,slug,id }) {
         setclassHeart(!classHeart)
     }
     const convertDiscount = (a,b) => {
-        return ((a*b)%100).toFixed(3)
+        return (a-((a*b)/100)).toFixed(3)
     }
     const data = useContext(DataContext)
     const setProductDetailInfoHandle = () => {
@@ -38,6 +38,7 @@ function Product({ classProps,name,price,discount,img,slug,id }) {
                             <img
                                 src={img}
                                 alt="hinh-mon-an"
+                                loading="lazy"
                             >
                             </img>
                         </Link>
@@ -64,8 +65,8 @@ function Product({ classProps,name,price,discount,img,slug,id }) {
                         <div className='product__price'>
                             {
                                 discount > 0 ? <>
-                                    <span>{ convertDiscount(price,discount)}₫</span>
-                                    {/* <span> { price.toFixed(3) }₫</span> */}
+                                    {/* <span>{ convertDiscount(price,discount)}₫</span> */}
+                                    <span> { price.toFixed(3) }₫</span>
                                 </>
                                     :
                                     <span>{price.toFixed(3)}₫</span>

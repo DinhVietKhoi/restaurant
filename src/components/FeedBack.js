@@ -6,7 +6,7 @@ function FeedBack({ name,avatar,work,content}) {
             <div className='feedback__container'>
                 <div className='feedback__user'>
                     <div className='feedback__info'>
-                        <img src={avatar} alt='img'></img>
+                        <img src={avatar} alt='img' loading="lazy"></img>
                         <div className='feedback__name'>
                             <span>{name}</span>
                             <span>{work}</span>
