@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/restaurant/static/css/main.00d10530.css",
-    "main.js": "/restaurant/static/js/main.11231a30.js",
+    "main.css": "/restaurant/static/css/main.0f89585c.css",
+    "main.js": "/restaurant/static/js/main.a52761d5.js",
     "static/media/menu2.webp": "/restaurant/static/media/menu2.1ad9924a761dd4df486a.webp",
     "static/media/menu1.webp": "/restaurant/static/media/menu1.7bfc3f1224156f30bdfe.webp",
+    "static/media/order.webp": "/restaurant/static/media/order.fd221b14b7945f01a87e.webp",
     "static/media/menu4.webp": "/restaurant/static/media/menu4.d2bbcac820eff5c37a96.webp",
     "static/media/menu3.webp": "/restaurant/static/media/menu3.608126aca39dc4544601.webp",
     "static/media/menu5.webp": "/restaurant/static/media/menu5.91f95d182eb78151c0f3.webp",
@@ -11,11 +12,11 @@
     "static/media/menu0.webp": "/restaurant/static/media/menu0.f14b53832f3328993c75.webp",
     "static/media/voucher.webp": "/restaurant/static/media/voucher.95a1ece28056d6e828f0.webp",
     "index.html": "/restaurant/index.html",
-    "main.00d10530.css.map": "/restaurant/static/css/main.00d10530.css.map",
-    "main.11231a30.js.map": "/restaurant/static/js/main.11231a30.js.map"
+    "main.0f89585c.css.map": "/restaurant/static/css/main.0f89585c.css.map",
+    "main.a52761d5.js.map": "/restaurant/static/js/main.a52761d5.js.map"
   },
   "entrypoints": [
-    "static/css/main.00d10530.css",
-    "static/js/main.11231a30.js"
+    "static/css/main.0f89585c.css",
+    "static/js/main.a52761d5.js"
   ]
 }
