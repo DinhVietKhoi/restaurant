@@ -156,7 +156,7 @@ function Payment({ breadCrumbHandle }) {
                                 </div>
                                 <div className='price__group'>
                                     <span>Tổng tiền: </span>
-                                    <span style={{color:"#d69c52"}}>{new Intl.NumberFormat('en-DE').format(data.sumMoney+40)}.000₫</span>
+                                    <span style={{color:"#d69c52"}}>{new Intl.NumberFormat('en-DE').format(data.sumMoney+fee)}.000₫</span>
                                 </div>
                             </div>
                             <div className='payment__submit l-0'>

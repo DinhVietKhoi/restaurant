@@ -125,7 +125,9 @@ function App() {
   console.log(checkLocal)
 }
   useEffect(() => {
-    setProductCart(JSON.parse(localStorage.getItem('productCart')))
+    if (JSON.parse(localStorage.getItem('productCart'))!==null) {
+      setProductCart(JSON.parse(localStorage.getItem('productCart')))
+    }
   }, [])
   useEffect(() => {
     if(checkLocal===true)
