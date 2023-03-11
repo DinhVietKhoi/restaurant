@@ -192,9 +192,9 @@ function Navigation({ changeTypeFoodHandle }) {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='header__booking'>
+                                <Link to='/dat-ban' className='header__booking'>
                                     <span>Đặt bàn</span>
-                                </div>
+                                </Link>
                             </div>
                         </div>
                         <div className='col c-0 l-12'>

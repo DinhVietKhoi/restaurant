@@ -125,7 +125,7 @@ function ProductDetail({ breadCrumbHandle }) {
                                                         </div>
                                                         <div className='cart'>
                                                             <span className='add__cart' onClick={()=>data.addProductCartHandle(productCurrent[0].id,numberProduct)}>THÊM VÀO GIỎ HÀNG</span>
-                                                            <span className='add__cart'>ĐẶT BÀN Ở ĐÂY</span>
+                                                            <Link to='/dat-ban' className='add__cart'>ĐẶT BÀN Ở ĐÂY</Link>
                                                         </div>
                                                     </div>
                                                 </div>

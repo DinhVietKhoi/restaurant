@@ -19,11 +19,13 @@ import AddCart from './components/AddCart.js';
 import foodObject from './data/FoodAll'
 import Cart from './pages/Cart.js';
 import Payment from './pages/Payment.js';
+import Order from './pages/Order.js';
 
 export const DataContext = createContext()
 
 function App() {
   const [typeFood, setTypeFood] = useState('all')
+  const [checkLocal,setCheckLocal] = useState(false)
   const changeTypeFoodHandle = (a) => {
     setTypeFood(a)
   }
@@ -44,6 +46,7 @@ function App() {
   const [productCart,setProductCart] = useState([{id:'',number:''}])
   
   const addProductCartHandle = (id, number) => {
+    setCheckLocal(true)
     if (id > 0) {
       let productCartFake = productCart;
       const index = productCartFake.findIndex(e => e.id === id)
@@ -98,7 +101,6 @@ function App() {
         }
       })
     })
-
   }, [productCart, toggleAddCart1, foodObject, foodObject])
   const changleNumberProduct = (id, a) => {
     setToggleAddCart1(!toggleAddCart1)
@@ -118,7 +120,17 @@ function App() {
       productCartfake[position].number =0
     }
     setProductCart(productCartfake)
-  }
+  console.log(productCart)
+    setCheckLocal(true)
+  console.log(checkLocal)
+}
+  useEffect(() => {
+    setProductCart(JSON.parse(localStorage.getItem('productCart')))
+  }, [])
+  useEffect(() => {
+    if(checkLocal===true)
+      localStorage.setItem('productCart', JSON.stringify(productCart));
+  },[productCart,checkLocal,toggleAddCart1])
   return (
     <BrowserRouter>
       <DataContext.Provider value={{changleNumberProduct,sumMoney, toggleAddCart1, numberProduct,productDetailInfo, setProductDetailInfoHandle, productCart, addProductCartHandle,toggleAddCartHandle}}>
@@ -130,7 +142,7 @@ function App() {
             position="top-right"
             hideProgressBar={false}
             newestOnTop={false}
-            closeOnClick
+            closeOnClick={false}
             rtl={false}
             draggable={false}
             theme="light"
@@ -150,6 +162,7 @@ function App() {
             <Route path='/lien-he' element={<Contact breadCrumbHandle={breadCrumbHandle} />} />
             <Route path='/gio-hang' element={<Cart breadCrumbHandle={breadCrumbHandle} />} />
             <Route path='/thanh-toan' element={<Payment breadCrumbHandle={breadCrumbHandle} />} />
+            <Route path='/dat-ban' element={<Order breadCrumbHandle={breadCrumbHandle} />} />
             <Route path='*' element={<NotFound breadCrumbHandle={breadCrumbHandle} />} />
           </Routes>
           <Footer />

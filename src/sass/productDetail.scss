@@ -148,12 +148,22 @@
                 &:hover{
                     opacity: 1;
                 }
-                &:nth-child(1){
-                    margin-right: 10px;
-                }
-                &:nth-child(2){
-                    margin-left: 10px;
-                    background-color: #d83a3a;
+                margin-right: 10px;
+            }
+            & a{
+                font-weight: 700;
+                cursor: pointer;
+                text-align: center;
+                flex: 1;
+                padding: 15px;
+                border-radius: 10px;
+                opacity: 0.8;
+                transition: .125s ;
+                margin-left: 10px;
+                color:#ffffff;
+                background-color: #d83a3a;
+                &:hover{
+                    opacity: 1;
                 }
             }
         }

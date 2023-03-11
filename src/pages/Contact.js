@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import '../sass/contact.scss'
-function Contact({breadCrumbHandle}) {
+function Contact({ breadCrumbHandle }) {
+    
     useEffect(() => {
         breadCrumbHandle({
             content: 'Liên hệ',
@@ -10,6 +12,11 @@ function Contact({breadCrumbHandle}) {
             type: 1,
         })
     }, [])
+    const submitHandle = (e) => {
+        e.preventDefault();
+        toast("Chức năng đang được phát triển!!")
+
+    }
     return (
         <div className='contact'>
             <div className='contact__container container'>
@@ -36,7 +43,7 @@ function Contact({breadCrumbHandle}) {
                                             <strong>Email:</strong><a className="footer__email" href="mailto:support@sapo.vn"> support@sapo.vn</a>
                                         </li>
                                         <li  className='gohome'>
-                                            <Link to="/">Về trang chủ</Link>
+                                            <Link to="/restaurant">Về trang chủ</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -46,12 +53,12 @@ function Contact({breadCrumbHandle}) {
                             <div className='boxControl'>
                                 <h4>LIÊN HỆ VỚI CHÚNG TÔI</h4>
                                 <div className='info'>
-                                    <form>
+                                    <form onSubmit={submitHandle}>
                                         <input placeholder='Họ và tên'></input>
                                         <input placeholder='Email' type='email'></input>
                                         <input placeholder='Điện thoại' type='number'></input>
                                         <textarea placeholder='Nội dung' rows='3'></textarea>
-                                        <button>Gửi thông tin</button>
+                                        <button type="submit">Gửi thông tin</button>
                                     </form>
                                 </div>
                             </div>
