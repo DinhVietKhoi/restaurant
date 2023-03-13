@@ -291,7 +291,7 @@ function FoodCollection({ breadCrumbHandle,changeTypeFoodHandle,typeFood }) {
                 </div>
               </div>
             </div>
-            <div className='col- c-9 l-12'>
+            <div className='col-gutter-big c-9 l-12'>
               <div className='collection__product'>
                 <div className='collection-product__header'>
                   <span className='title'>{
