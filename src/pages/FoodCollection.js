@@ -81,7 +81,7 @@ function FoodCollection({ breadCrumbHandle,changeTypeFoodHandle,typeFood }) {
               <div className='collection__menu boxControl'>
                 <h4>DANH MỤC SẢN PHẨM</h4>
                 <ul>
-                  <li><Link to="/"> Trang chủ</Link></li>
+                  <li><Link to="/restaurant"> Trang chủ</Link></li>
                   <li><Link to="/gioi-thieu">Giới thiệu</Link></li>
                   <li className='collection-menu__dropdown'>
                     <div className='dropdown'>
@@ -189,7 +189,7 @@ function FoodCollection({ breadCrumbHandle,changeTypeFoodHandle,typeFood }) {
                   <div className='collection__menu boxControl'>
                   <h4>DANH MỤC SẢN PHẨM</h4>
                   <ul>
-                    <li><Link to="/"> Trang chủ</Link></li>
+                    <li><Link to="/restaurant"> Trang chủ</Link></li>
                     <li><Link to="/gioi-thieu">Giới thiệu</Link></li>
                     <li className='collection-menu__dropdown'>
                       <div className='dropdown'>
