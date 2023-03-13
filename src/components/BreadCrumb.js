@@ -6,7 +6,7 @@ function BreadCrumb({ breadCrumb }) {
     return (
         <div className='breadCrumb' style={breadCrumb===''?{opacity:'0',visibility:'hidden'}:{opacity:'1',visibility:'visible'}}>
             <div className='breadCrumb__container container'>
-                <Link to='/'>Trang chủ</Link>
+                <Link to='/restaurant'>Trang chủ</Link>
                 <i className="fa-solid fa-chevron-right"></i>
                 {
                     breadCrumb.type === 1
