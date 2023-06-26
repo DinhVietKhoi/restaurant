@@ -594,5 +594,33 @@
     .product__body::after {
         display: none !important;
     }
-    
+    .home__banner__title{
+        span{
+            &:nth-child(1){
+                font-size: 56px;
+            }
+            &:nth-child(2){
+                font-size: 16px;
+            }
+        }
+    }
+    .collection-product__header{
+        flex-direction: column;
+        span{
+            margin-bottom: 15px;
+        }
+    }
+    .productDetail__info{
+        .cart{
+            flex-direction: column;
+            align-items: center;
+            span{
+                margin:0;
+                margin-bottom: 10px;
+            }
+            a{
+                margin:0;
+            }
+        }
+    }
 }

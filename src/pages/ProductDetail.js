@@ -129,7 +129,7 @@ function ProductDetail({ breadCrumbHandle }) {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className='col c-12'>
+                                                <div className='col-gutter-big c-12'>
                                                     <div className='productDetail__voucher'>
                                                         <div className='image'>
                                                             <img alt='img' src={voucher}></img>
@@ -168,7 +168,7 @@ function ProductDetail({ breadCrumbHandle }) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='col c-12'>
+                                    <div className='col-gutter-big c-12'>
                                         <div className='productDetail__content'>
                                             <h1>Mô tả món ăn</h1>
                                             <div className='descibe__item'>
@@ -206,7 +206,7 @@ function ProductDetail({ breadCrumbHandle }) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='col c-12'>
+                                    <div className='col-gutter-big c-12 product-fix'>
                                         <TitleSection title="Sản phẩm cùng loại" />
                                         <Swiper
                                             breakpoints={{
@@ -217,12 +217,11 @@ function ProductDetail({ breadCrumbHandle }) {
                                                 1200: {
                                                     slidesPerView: 4,
                                                 },
-                                                768: {
-                                                    slidesPerView: 3,
-                                                }
-                                                ,
-                                                0: {
+                                                576: {
                                                     slidesPerView: 2,
+                                                },
+                                                0: {
+                                                    slidesPerView: 1,
                                                 }
                                             }}
                                             pagination={{
@@ -250,7 +249,7 @@ function ProductDetail({ breadCrumbHandle }) {
                                 </div>
                             </div>
                         </div>
-                        <div className='col c-3 l-12'>
+                        <div className='col-gutter-big c-3 l-12'>
                             <div className='grid'>
                                 <div className='row'>
                                     <div className='col c-12'>

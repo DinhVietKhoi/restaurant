@@ -185,11 +185,11 @@ function Home({ breadCrumbHandle }) {
                                 992: {
                                     slidesPerView: 4,
                                 },
-                                768: {
-                                    slidesPerView: 3,
+                                576: {
+                                    slidesPerView: 2,
                                 },
                                 0: {
-                                    slidesPerView: 2,
+                                    slidesPerView: 1,
                                 }
                             }}
                             pagination={{
